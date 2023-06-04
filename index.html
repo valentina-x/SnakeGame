@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мини-игра Змейка</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+	<main class="container">
+		<div class="panel">
+			<h1 class="panel__title">Мини-игра "Змейка"</h1>
+			<div class="panel__result panel__result-now">Cчёт: <span>0</span></div>
+			<div class="panel__result panel__result-best">Рекорд: <span>0</span></div>
+		</div>
+		
+		<canvas id="snakegame" class="snakegame" width="600" height="450"></canvas>
+
+		<div class="rules">
+			<b>Правила игры</b>
+			<ol>
+				<li>В начале игры змейка располагается в середине поля. Её изначальная длина — две клетки.</li>
+				<li>Игра начинается при клике на любое место поля. В случайном месте поля появляется яблоко, и змейка начинает двигаться. Стрелками на клавиатуре можно двигать змейку в нужном направлении.</li>
+				<li>После того как голова змейки попадает на клетку с яблоком, яблоко считается съеденным: игрок получает одно очко, яблоко исчезает с данной клетки и появляется в другом месте, а размер змейки увеличивается на одну клетку.</li>
+				<li>Если голова змейки упирается в её собственное тело, игра заканчивается. Если змейка врезается в стену, игра заканчивается. Если игрок побил свой рекорд по очкам, значение рекорда перезаписывается. Также появляется кнопка, которая позволяет начать игру заново.</li>
+			</ol>
+		</div>
+	</main>
+
+	<script src="./js/classes/Cell.js"></script>
+	<script src="./js/classes/Field.js"></script>
+	<script src="./js/classes/Snake.js"></script>
+	<script src="./js/classes/Apple.js"></script>
+	<script src="./js/classes/Collision.js"></script>
+	<script src="./js/classes/Score.js"></script>
+	<script src="./js/classes/SnakeGame.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
